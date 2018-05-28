@@ -6,7 +6,7 @@ package objects;
  * 
  * @author Forlin Marco & Favari Matteo
  */
-public class ArticleInWarehouse implements Comparable<ArticleInWarehouse> {
+public class ArticleInWarehouse {
     private ArticleType articleType;
     private long code; // 13 cifre
     private float price;
@@ -169,16 +169,5 @@ public class ArticleInWarehouse implements Comparable<ArticleInWarehouse> {
     @Override
     public int hashCode() {
         return Long.hashCode(code);
-    }
-
-    /**
-     * Implementazione del metodo compareTo.
-     * 
-     * @param other, oggetto da confrontare
-     * @return int, minore di 0 se this < other, uguale a 0 se this = other, maggiore di 0 altrimenti
-     */
-    @Override
-    public int compareTo(ArticleInWarehouse other) {
-        return Long.compare(code, other.code);
     }
 }

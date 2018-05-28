@@ -1,5 +1,7 @@
 package objects;
 
+import java.util.Date;
+
 /**
  * Classe che rappresenta una data.
  * 
@@ -28,6 +30,10 @@ public class MyDate implements Comparable<MyDate> {
         
         if(day < 1 || day > getDayForMonth(month, year))
             throw new IllegalArgumentException("Giorno non valido");
+    }
+    
+    public MyDate(Date date) {
+        this(date.getYear(), date.getMonth(), date.getDay());
     }
     
     /**

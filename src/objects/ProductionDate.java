@@ -25,7 +25,7 @@ public class ProductionDate extends MyDate {
         
         // controllo sulla data:
         if((new MyDate(year, month, day)
-                .compareTo(new MyDate(currentDate.getYear(), currentDate.getMonth(), currentDate.getDay()))) > 0)
+                .compareTo(new MyDate(currentDate))) > 0)
             throw new IllegalArgumentException("La data di produzione deve essere oggi o precedente");
     }
 }

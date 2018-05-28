@@ -6,7 +6,7 @@ package objects;
  * 
  * @author Forlin Marco & Favari Matteo
  */
-public class ArticleType implements Comparable<ArticleType> {
+public class ArticleType {
     private String name;
     private String description;
     private Sport sport;
@@ -119,16 +119,5 @@ public class ArticleType implements Comparable<ArticleType> {
     @Override
     public int hashCode() {
         return name.hashCode();
-    }
-
-    /**
-     * Implementazione del metodo compareTo.
-     * 
-     * @param other, oggetto da confrontare
-     * @return int, minore di 0 se this < other, uguale a 0 se this = other, maggiore di 0 altrimenti
-    */
-    @Override
-    public int compareTo(ArticleType other) {
-        return name.compareTo(other.name);
     }
 }
